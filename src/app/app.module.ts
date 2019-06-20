@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {NgxWebstorageModule} from 'ngx-webstorage';
 import {httpInterceptorProviders} from './common/interceptors';
 import {FormsModule} from '@angular/forms';
+import { AuthHomeComponent } from './auth/home/auth-home/auth-home.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {FormsModule} from '@angular/forms';
     FullBannerComponent,
     ProjectsComponent,
     SingleProjectComponent,
+    AuthHomeComponent,
   ],
   imports: [
     BrowserModule,

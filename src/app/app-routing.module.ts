@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './public/home/home.component';
+import {AuthHomeComponent} from './auth/home/auth-home/auth-home.component';
 
 const routes: Routes = [
   {
@@ -12,12 +13,12 @@ const routes: Routes = [
     pathMatch: 'full',
     // canActivate: [PublicGuard]
   },
-  // {
-  //   path: 'auth-home',
-  //   component: AuthHomeComponent,
-  //   data: {name: 'AuthHome'},
-  //   canActivate: [AuthGuard]
-  // },
+  {
+    path: 'auth-home',
+    component: AuthHomeComponent,
+    data: {name: 'AuthHome'},
+    canActivate: [AuthGuard]
+  },
   // {path: 'projects/:id', component: ProjectDetailComponent}
 ];
 

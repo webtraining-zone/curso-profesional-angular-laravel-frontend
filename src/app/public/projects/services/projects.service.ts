@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Project} from '../models/project.model';
 import {SessionStorageService} from 'ngx-webstorage';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {API} from '../../../config/api';
 
@@ -22,14 +22,6 @@ export class ProjectsService {
     return false;
   }
 
-  createHeadersObject(token) {
-    return new HttpHeaders(
-      {
-        'Content-Type': 'application/json; charset=utf-8',
-        Authorization: `Bearer ${token}`,
-      });
-  }
-
   getProjects(): Observable<Array<Project>> {
     const serviceURL = `${API.DATA_SERVICES_BASE_URL}/projects`;
     return this.http.get<Array<Project>>(serviceURL);
@@ -40,4 +32,15 @@ export class ProjectsService {
     return this.http.get<Project>(serviceURL);
   }
 
+  getProjectsByUsingToken(): Observable<Array<Project>> {
+    const serviceURL = `${API.DATA_SERVICES_BASE_URL}/projects/user`;
+    // const token = this.getToken();
+    //
+    // if (token) {
+    //   const headers = this.createHeadersObject(token);
+    return this.http.get<Array<Project>>(serviceURL);
+    // }
+
+    // return null;
+  }
 }

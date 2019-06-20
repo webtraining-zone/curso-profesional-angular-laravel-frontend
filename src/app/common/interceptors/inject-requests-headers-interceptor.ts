@@ -8,20 +8,46 @@ import {
 
 import {Observable} from 'rxjs';
 
+import {SessionStorageService} from 'ngx-webstorage';
+
 /** Pass untouched request through to the next request handler. */
 @Injectable(
 )
 export class InjectRequestsHeadersInterceptor implements HttpInterceptor {
 
+  constructor(public sessionStorage: SessionStorageService) {
+
+  }
+
+  getToken() {
+    const user = this.sessionStorage.retrieve('user');
+    if (!!user && !!user.token) {
+      return user.token;
+    }
+    return false;
+  }
+
   intercept(request: HttpRequest<any>, next: HttpHandler):
     Observable<HttpEvent<any>> {
 
-    request = request.clone({
-      setHeaders: {
-        'Content-Type': 'application/json',
-        // Authorization: `Bearer ${this.auth.getToken()}`
-      },
-    });
+    const headers = {
+      'Content-Type': 'application/json',
+    };
+
+    const token = this.getToken();
+
+    if (token) {
+      request = request.clone({
+        setHeaders: {
+          ...headers,
+          Authorization: `Bearer ${token}`,
+        },
+      });
+    } else {
+      request = request.clone({
+        setHeaders: headers,
+      });
+    }
 
     return next.handle(request);
   }

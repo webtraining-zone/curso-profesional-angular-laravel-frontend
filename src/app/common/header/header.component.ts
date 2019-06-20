@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AfterLoginActionsService} from '../services/after-login-actions.service';
 import {AuthenticationService} from '../services/authentication.service';
 import {Router} from '@angular/router';
@@ -7,7 +7,7 @@ import {ToggleModalService} from '../services/toggle-modal.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   isModalActive;
@@ -20,6 +20,15 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.afterLoginActionsService.onLoginCompleted.subscribe(
+      (message: string) => {
+        this.toggleModal();
+      });
+
+    this.toggleModalService.onToggle.subscribe(
+      (message: string) => {
+        this.toggleModal();
+      });
   }
 
   toggleModal() {

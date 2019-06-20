@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="b-component margin-top-sm">
+    <button (click)="goBack()" class="button is-success is-outlined">
+      <i class="fas fa-arrow-left"></i>
+      <span>&nbsp;Go back</span>
+    </button>
+  </div>
+
+  <div class="b-component" *ngIf="!!project">
+
+    <div class="b-project b-project--detail">
+
+      <div class="columns">
+        <div class="column is-one-third">
+          <figure class="b-project__image-container">
+            <img src="{{project.image | generateImageUrl}}"
+                 alt="{{ project.manufacturer?.name }} {{ project.model }}" class="b-project__image">
+          </figure>
+
+        </div>
+        <div class="column">
+          <div class="content b-project">
+            <h1 class="b-project__title">{{ project.manufacturer?.name }} {{ project.model }}</h1>
+            <div class="b-project__year">
+              <p>
+                <strong>Year:</strong> {{ project.year }}
+              </p>
+            </div>
+
+            <div class="b-project__price">
+              <p>
+                <strong>Price per day:</strong> $ {{ project.price }} USD
+              </p>
+            </div>
+
+            <div class="b-project__price">
+              <p>
+                <strong>Manufacturer:</strong>
+                <a href="#" routerLink="/manufacturers/{{project.manufacturer?.id}}" class="b-project__manufacturer">
+                  {{ project.manufacturer?.name }}
+                </a>
+              </p>
+            </div>
+
+            <div class="b-project__more-link">
+              <p>
+                <a href="{{project.link}}" target="_blank">
+                  <i class="fa fa-external-link-alt"></i>
+                  <span>&nbsp;More information</span>
+                </a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+

@@ -4,6 +4,7 @@ import {HomeComponent} from './public/home/home.component';
 import {AuthHomeComponent} from './auth/home/auth-home/auth-home.component';
 import {AuthenticatedGuard} from './common/guards/authenticated.guard';
 import {PublicGuard} from './common/guards/public.guard';
+import {ProjectDetailComponent} from './public/projects/detail/project-detail.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
     data: {name: 'AuthHome'},
     canActivate: [AuthenticatedGuard],
   },
-  // {path: 'projects/:id', component: ProjectDetailComponent}
+  {path: 'projects/:slug', component: ProjectDetailComponent},
 ];
 
 @NgModule({

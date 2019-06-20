@@ -15,6 +15,10 @@ import {NgxWebstorageModule} from 'ngx-webstorage';
 import {httpInterceptorProviders} from './common/interceptors';
 import {FormsModule} from '@angular/forms';
 import { AuthHomeComponent } from './auth/home/auth-home/auth-home.component';
+import { ProjectDetailComponent } from './public/projects/detail/project-detail.component';
+import { GenerateImageUrlPipe } from './common/pipes/generate-image-url.pipe';
+import { GetFirstCharPipe } from './common/pipes/get-first-char.pipe';
+import { FilterByPipe } from './common/pipes/filter-by.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { AuthHomeComponent } from './auth/home/auth-home/auth-home.component';
     ProjectsComponent,
     SingleProjectComponent,
     AuthHomeComponent,
+    ProjectDetailComponent,
+    GenerateImageUrlPipe,
+    GetFirstCharPipe,
+    FilterByPipe,
   ],
   imports: [
     BrowserModule,

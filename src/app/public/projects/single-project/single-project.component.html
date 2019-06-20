@@ -1,7 +1,7 @@
 <div class="b-project b-project--list-item">
   <div class="card">
     <div class="card-image">
-      <a href="#" routerLink="/projects/{{project.id}}">
+      <a href="#" routerLink="/projects/{{project.slug}}">
         <figure class="image is-16by9">
           <img src="{{project.thumbnail}}"
                alt="">
@@ -11,13 +11,13 @@
     <div class="card-content">
       <div class="media">
         <div class="media-left">
-          <a href="#" routerLink="/projects/{{project.id}}" class="b-project__manufacturer-char">
+          <a href="#" routerLink="/projects/{{project.slug}}" class="b-project__manufacturer-char">
             A
           </a>
         </div>
         <div class="media-content">
           <p class="b-project__title title is-4">
-            <a class="b-project__title-link" routerLink="/projects/{{project.id}}">
+            <a class="b-project__title-link" routerLink="/projects/{{project.slug}}">
               {{project.title}}
             </a>
           </p>

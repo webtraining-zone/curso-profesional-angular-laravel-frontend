@@ -24,7 +24,7 @@ export class ProjectDetailComponent implements OnInit {
 
   getProject() {
     // Get the "id" from the route
-    const slug = parseInt(this.route.snapshot.paramMap.get('slug'), 10);
+    const slug = this.route.snapshot.paramMap.get('slug');
     this.projectsService.getProject(slug).
       subscribe(
         project => this.project = project,

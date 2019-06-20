@@ -27,8 +27,8 @@ export class ProjectsService {
     return this.http.get<Array<Project>>(serviceURL);
   }
 
-  getProject(id: number): Observable<Project> {
-    const serviceURL = `${API.DATA_SERVICES_BASE_URL}/projects/${id}`;
+  getProject(slug: string): Observable<Project> {
+    const serviceURL = `${API.DATA_SERVICES_BASE_URL}/projects/${slug}`;
     return this.http.get<Project>(serviceURL);
   }
 

@@ -4,7 +4,7 @@
       <div class="navbar-brand">
         <a class="navbar-item" routerLink="/">
           <img src="/assets/logo.png" alt="Awesome Rental Car">
-          <span class="b-app__name">Rentapy</span>
+          <span class="b-app__name">Funding</span>
         </a>
         <div class="navbar-burger burger" data-target="navbarAwesomeCartRental">
           <span></span>
@@ -19,13 +19,13 @@
         </div>
 
         <div class="navbar-end">
-          <a class="navbar-item" (click)="toggleModal()" *ngIf="! _authService.isLoggedIn()">
-            Login
-          </a>
+          <!--<a class="navbar-item" (click)="toggleModal()" *ngIf="! _authService.isLoggedIn()">-->
+            <!--Login-->
+          <!--</a>-->
 
-          <a class="navbar-item" (click)="logout()" *ngIf=" _authService.isLoggedIn()">
-            Logout
-          </a>
+          <!--<a class="navbar-item" (click)="logout()" *ngIf=" _authService.isLoggedIn()">-->
+            <!--Logout-->
+          <!--</a>-->
           <!--<div class="navbar-item has-dropdown is-hoverable">-->
           <!--<a class="navbar-link" href="/">-->
           <!--Rent a car-->
@@ -49,17 +49,17 @@
 
 </header>
 
-<div class="modal" [ngClass]="{ 'is-active animated fadeIn' : isModalActive }">
-  <div class="modal-background" (click)="toggleModal()"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Login</p>
-      <button class="delete" aria-label="close" (click)="toggleModal()"></button>
-    </header>
-    <section class="modal-card-body">
-      <app-login-form></app-login-form>
-    </section>
-    <footer class="modal-card-foot">
-    </footer>
-  </div>
-</div>
+<!--<div class="modal" [ngClass]="{ 'is-active animated fadeIn' : isModalActive }">-->
+  <!--<div class="modal-background" (click)="toggleModal()"></div>-->
+  <!--<div class="modal-card">-->
+    <!--<header class="modal-card-head">-->
+      <!--<p class="modal-card-title">Login</p>-->
+      <!--<button class="delete" aria-label="close" (click)="toggleModal()"></button>-->
+    <!--</header>-->
+    <!--<section class="modal-card-body">-->
+      <!--&lt;!&ndash;<app-login-form></app-login-form>&ndash;&gt;-->
+    <!--</section>-->
+    <!--<footer class="modal-card-foot">-->
+    <!--</footer>-->
+  <!--</div>-->
+<!--</div>-->

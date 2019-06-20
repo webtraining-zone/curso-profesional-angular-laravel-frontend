@@ -1,0 +1,27 @@
+@import "../../../../styles-variables";
+
+.b-full-banner-container {
+  background-color: darken($color-primary, 10%);
+}
+
+.b-full-banner {
+  background: url("/assets/bg.png") no-repeat scroll right center transparent;
+  background-size: 25%;
+  color: white;
+
+  &__info {
+
+  }
+
+  &__title {
+    padding: 120px 20px 20px 20px;
+    font-size: 4em;
+    color: white;
+
+  }
+
+  &__description {
+    padding: 0 0 130px 20px;
+    font-size: 2em;
+  }
+}

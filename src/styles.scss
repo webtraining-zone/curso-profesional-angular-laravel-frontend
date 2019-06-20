@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles-variables";
+
+body {
+  background-color: $color-bg-body;
+}
+
+a {
+  color: $color-secondary;
+  font-weight: bold;
+}
+
+.b-component {
+  padding: 32px 32px 30px 32px;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 2rem rgba(0, 0, 255, .1);
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 1rem;
+  transition: all .3s ease-in-out;
+}
+
+@media(max-width: 767px) {
+  .b-component {
+    margin: 20px;
+  }
+}
+
+@media(max-width: 991px) {
+  .b-content {
+    margin: 20px;
+  }
+}
+
+.margin-top-sm {
+  margin-top: 20px;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 20px;
+}

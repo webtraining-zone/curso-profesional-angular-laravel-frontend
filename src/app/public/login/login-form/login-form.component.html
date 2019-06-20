@@ -1,0 +1,40 @@
+<form #loginForm="ngForm" (ngSubmit)="onSubmit($event)">
+
+  <label for="username" class="b-label">Email</label>
+  <div class="control has-icons-left has-icons-right b-control">
+    <input id="username" class="input" type="text" placeholder="Email" required
+           [(ngModel)]="user.email" #email="ngModel" name="email">
+    <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+  </div>
+
+  <label for="password" class="b-label">Password</label>
+  <div class="control has-icons-left has-icons-right b-control">
+    <input id="password" class="input" type="password" placeholder="Password" required
+           [(ngModel)]="user.password" #password="ngModel" name="password">
+    <span class="icon is-small is-left">
+        <i class="fas fa-key"></i>
+      </span>
+  </div>
+
+  <div class="margin-top-sm">
+    <button type="submit" class="button is-success" [disabled]="!loginForm.form.valid">Login</button>
+  </div>
+
+  <div class="clearfix"></div>
+  <div *ngIf="!loginForm.form.valid" class="alert alert-danger margin-top-sm">
+    <ul>
+      <div *ngIf="email.errors">
+        <li [hidden]="!email.errors.required">
+          Invalid email
+        </li>
+      </div>
+      <div *ngIf="password.errors">
+        <li [hidden]="!password.errors.required">
+          Invalid password
+        </li>
+      </div>
+    </ul>
+  </div>
+</form>

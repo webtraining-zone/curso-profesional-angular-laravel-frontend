@@ -13,6 +13,7 @@ import {SingleProjectComponent} from './public/projects/single-project/single-pr
 import {HttpClientModule} from '@angular/common/http';
 import {NgxWebstorageModule} from 'ngx-webstorage';
 import {httpInterceptorProviders} from './common/interceptors';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {httpInterceptorProviders} from './common/interceptors';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
   ],

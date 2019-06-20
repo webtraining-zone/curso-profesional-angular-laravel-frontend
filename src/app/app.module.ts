@@ -11,7 +11,8 @@ import {FullBannerComponent} from './public/home/full-banner/full-banner.compone
 import {ProjectsComponent} from './public/projects/projects.component';
 import {SingleProjectComponent} from './public/projects/single-project/single-project.component';
 import {HttpClientModule} from '@angular/common/http';
-import { NgxWebstorageModule } from 'ngx-webstorage';
+import {NgxWebstorageModule} from 'ngx-webstorage';
+import {httpInterceptorProviders} from './common/interceptors';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,18 +1,17 @@
 <div class="container margin-top-sm margin-bottom-sm">
   <div class="b-content b-my-vehicles">
     <div class="content">
-      <h2>My vehicles</h2>
+      <h2>My projects</h2>
     </div>
 
     <div class="columns is-multiline">
       <div class="column is-one-quarter-desktop is-one-third-tablet"
-           *ngFor="let vehicle of vehicles">
-        <app-single-vehicle [isMyVehicle]="true" [vehicle]="vehicle"
-                            (cancelOneVehicle)="handleCancelOneVehicle($event)"></app-single-vehicle>
+           *ngFor="let project of projects">
+        <app-single-project [project]="project"></app-single-project>
       </div>
     </div>
   </div>
 </div>
 
 
-<app-vehicles (rentedVehicle)="handleRentedVehicle($event)"></app-vehicles>
+<app-projects></app-projects>

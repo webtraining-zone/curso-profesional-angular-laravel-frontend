@@ -1,0 +1,27 @@
+<div class="container margin-top-sm margin-bottom-sm">
+  <div class="b-content">
+    <div class="content">
+      <h2>See all the projects</h2>
+    </div>
+
+    <div class="columns">
+      <!--<div class="column">-->
+        <!--<div class="field">-->
+          <!--<div class="control">-->
+            <!--<input type="text" class="input is-primary" [(ngModel)]="searchText"-->
+                   <!--placeholder="Search by model">-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+    </div>
+
+    <div class="columns is-multiline">
+      <div class="column is-one-quarter-desktop is-one-third-tablet"
+           *ngFor="let project of projects">
+        <app-single-project [project]="project"></app-single-project>
+      </div>
+    </div>
+  </div>
+</div>
+

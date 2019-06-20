@@ -1,0 +1,35 @@
+<div class="b-project b-project--list-item">
+  <div class="card">
+    <div class="card-image">
+      <a href="#" routerLink="/vehicles/{{project.id}}">
+        <figure class="image is-16by9">
+          <img src="{{project.thumbnail}}"
+               alt="">
+        </figure>
+      </a>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <a href="#" routerLink="/projects/{{project.id}}" class="b-project__manufacturer-char">
+            Name
+          </a>
+        </div>
+        <div class="media-content">
+          <p class="b-project__title title is-4">
+            <a class="b-project__title-link" routerLink="/projects/{{project.id}}">
+              TEXT
+            </a>
+          </p>
+          <p class="b-project__subtitle subtitle is-6">NAME</p>
+        </div>
+      </div>
+
+      <div class="b-project__content content">
+
+        <br>
+
+      </div>
+    </div>
+  </div>
+</div>

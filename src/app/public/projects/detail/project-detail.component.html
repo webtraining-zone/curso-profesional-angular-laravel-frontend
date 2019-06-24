@@ -2,7 +2,7 @@
   <div class="b-component margin-top-sm">
     <button (click)="goBack()" class="button is-success is-outlined">
       <i class="fas fa-arrow-left"></i>
-      <span>&nbsp;Go back</span>
+      <span i18n="go back button|Label used for displaying a go back button">&nbsp;Go back</span>
     </button>
   </div>
 
@@ -23,7 +23,7 @@
             <h1 class="b-project__title">{{ project.title }}</h1>
             <div class="b-project__year">
               <p>
-                <strong>Year:</strong> {{ project.year }}
+                <strong i18n="Label used for displaying project's creation date">Created on:</strong> {{ project.created_at }}
               </p>
             </div>
 
@@ -31,7 +31,7 @@
               <p>
                 <a href="{{project.link}}" target="_blank">
                   <i class="fa fa-external-link-alt"></i>
-                  <span>&nbsp;More information</span>
+                  <span i18n="Label used for displaying project's link to get more information">&nbsp;More information</span>
                 </a>
               </p>
             </div>

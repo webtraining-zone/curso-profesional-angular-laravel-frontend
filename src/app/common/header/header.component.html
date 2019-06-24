@@ -20,11 +20,11 @@
 
         <div class="navbar-end">
           <a class="navbar-item" (click)="toggleModal()" *ngIf="!authService.isLoggedIn()">
-            Login
+            <span i18n="Login">Login</span>
           </a>
 
           <a class="navbar-item" (click)="logout()" *ngIf="authService.isLoggedIn()">
-            Logout
+            <span i18n="Logout">Logout</span>
           </a>
 
         </div>
@@ -38,7 +38,7 @@
   <div class="modal-background" (click)="toggleModal()"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title">Login</p>
+      <p class="modal-card-title" i18n="Login">Login</p>
       <button class="delete" aria-label="close" (click)="toggleModal()"></button>
     </header>
     <section class="modal-card-body">

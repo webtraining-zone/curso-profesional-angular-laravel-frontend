@@ -3,7 +3,7 @@
     <div class="card-image">
       <a href="#" routerLink="/projects/{{project.slug}}">
         <figure class="image is-16by9">
-          <img src="{{project.thumbnail}}"
+          <img src="{{project.thumbnail | generateImageUrl}}"
                alt="">
         </figure>
       </a>

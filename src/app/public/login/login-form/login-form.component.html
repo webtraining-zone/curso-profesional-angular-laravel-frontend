@@ -1,6 +1,6 @@
 <form #loginForm="ngForm" (ngSubmit)="onSubmit($event)">
 
-  <label for="username" class="b-label">Email</label>
+  <label for="username" class="b-label" i18n="Email">Email</label>
   <div class="control has-icons-left has-icons-right b-control">
     <input id="username" class="input" type="text" placeholder="Email" required
            [(ngModel)]="user.email" #email="ngModel" name="email">
@@ -9,7 +9,7 @@
       </span>
   </div>
 
-  <label for="password" class="b-label">Password</label>
+  <label for="password" class="b-label" i18n="Password">Password</label>
   <div class="control has-icons-left has-icons-right b-control">
     <input id="password" class="input" type="password" placeholder="Password" required
            [(ngModel)]="user.password" #password="ngModel" name="password">
@@ -19,7 +19,7 @@
   </div>
 
   <div class="margin-top-sm">
-    <button type="submit" class="button is-success" [disabled]="!loginForm.form.valid">Login</button>
+    <button type="submit" class="button is-success" [disabled]="!loginForm.form.valid" i18n="Login">Login</button>
   </div>
 
   <div class="clearfix"></div>

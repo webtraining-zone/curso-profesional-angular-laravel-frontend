@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -43,7 +43,7 @@ import { FilterByPipe } from './common/pipes/filter-by.pipe';
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
   ],
-  providers: [httpInterceptorProviders],
+  providers: [httpInterceptorProviders, { provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

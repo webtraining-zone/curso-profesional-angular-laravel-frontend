@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source>
+        <target>Iniciar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/common/header/header.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/common/header/header.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/login/login-form/login-form.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Login</note>
+      </trans-unit>
+      <trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
+        <source>Logout</source>
+        <target>Salir</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/common/header/header.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Logout</note>
+      </trans-unit>
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source>
+        <target>Correo electrónico</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/login/login-form/login-form.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Email</note>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source>
+        <target>Contraseña</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/login/login-form/login-form.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Password</note>
+      </trans-unit>
+      <trans-unit id="d496c0f362cb7191784cbb39107331272b250c2b" datatype="html">
+        <source>Make your dreams a reality</source>
+        <target>¡Haz tus sueños realidad!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/home/full-banner/full-banner.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Main headline title</note>
+      </trans-unit>
+      <trans-unit id="b7e65e333ed592347993029968a096ace6bfce21" datatype="html">
+        <source>
+            Start by writing and sharing your idea!
+          </source>
+          <target>Inicia compartiendo tu idea</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/home/full-banner/full-banner.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Main headline description</note>
+      </trans-unit>
+      <trans-unit id="cf2271468d1947c34b66ee3a1ee0a2c8f211d461" datatype="html">
+        <source>See all the projects</source>
+        <target>Ver todos los proyectos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/projects/projects.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">See all the projects</note>
+      </trans-unit>
+      <trans-unit id="d85532277275bcb4977eaf8d2e7211d0888eca7e" datatype="html">
+        <source> Go back</source>
+        <target> Regresar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/projects/detail/project-detail.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Label used for displaying a go back button</note>
+        <note priority="1" from="meaning">go back button</note>
+      </trans-unit>
+      <trans-unit id="49ad56b2541adef68bfddd9cd7fab0e3e5c0b596" datatype="html">
+        <source>Created on:</source>
+        <target>Creado el:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/projects/detail/project-detail.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Label used for displaying project&apos;s creation date</note>
+      </trans-unit>
+      <trans-unit id="978d930847611acbbe9f425a82a2e2c28e9fb2ea" datatype="html">
+        <source> More information</source>
+        <target> Más información</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/projects/detail/project-detail.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Label used for displaying project&apos;s link to get more information</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

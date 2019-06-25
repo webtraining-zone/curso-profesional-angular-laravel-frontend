@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:es": "ng serve --configuration=es",
     "build": "ng build",
+    "build:es": "ng build --configuration=es",
     "test": "ng test",
     "lint": "ng lint",
     "i18n:extract": "ng xi18n --outputPath src/locale && xliffmerge --profile xliffmerge.json en es",

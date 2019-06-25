@@ -2,39 +2,23 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
-        <source>Login</source>
-        <target>Iniciar</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/common/header/header.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-        <note priority="1" from="description">Login</note>
-      </trans-unit>
-      <trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
-        <source>Logout</source>
-        <target>Logout</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/common/header/header.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-        <note priority="1" from="description">Logout</note>
-      </trans-unit>
+
+
       <trans-unit id="Login" datatype="html">
         <source>Login</source>
-        <target>Login</target>
+        <target>Ingresar</target>
+
+
+      <context-group purpose="location"><context context-type="sourcefile">src/app/common/header/header.component.html</context><context context-type="linenumber">27</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/common/header/header.component.html</context><context context-type="linenumber">45</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/public/login/login-form/login-form.component.html</context><context context-type="linenumber">22</context></context-group></trans-unit><trans-unit id="Logout" datatype="html">
+        <source>Logout</source><target state="new">Salir</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/header/header.component.html</context>
-          <context context-type="linenumber">41</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/public/login/login-form/login-form.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="Email" datatype="html">
         <source>Email</source>
-        <target>Email</target>
+        <target>Correo electrónico</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/public/login/login-form/login-form.component.html</context>
           <context context-type="linenumber">3</context>
@@ -42,7 +26,7 @@
       </trans-unit>
       <trans-unit id="Password" datatype="html">
         <source>Password</source>
-        <target>Password</target>
+        <target>Contraseña</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/public/login/login-form/login-form.component.html</context>
           <context context-type="linenumber">12</context>
@@ -50,7 +34,7 @@
       </trans-unit>
       <trans-unit id="MainHeadlineTitle" datatype="html">
         <source>Make your dreams a reality</source>
-        <target>Make your dreams a reality</target>
+        <target>Haz tus sueños una realidad</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/public/home/full-banner/full-banner.component.html</context>
           <context context-type="linenumber">7</context>
@@ -60,7 +44,7 @@
         <source>
             Start by writing and sharing your idea!
           </source>
-        <target>Start by writing and sharing your idea!</target>
+        <target>¡Comienza compartiendo tu idea!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/public/home/full-banner/full-banner.component.html</context>
           <context context-type="linenumber">10</context>
@@ -68,13 +52,13 @@
       </trans-unit>
       <trans-unit id="SeeAllTheProjects" datatype="html">
         <source>See all the projects</source>
-        <target>See all the projects</target>
+        <target>Ver todos los proyectos</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/public/projects/projects.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit><trans-unit id="MyProjects" datatype="html">
-        <source>My projects</source><target state="new">My projects</target>
+        <source>My projects</source><target state="new">Mis proyectos</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/auth/home/auth-home/auth-home.component.html</context>
           <context context-type="linenumber">4</context>
@@ -82,7 +66,7 @@
       </trans-unit>
       <trans-unit id="GoBackButton|Label used for displaying a go back button" datatype="html">
         <source> Go back</source>
-        <target> Go back</target>
+        <target> Regresar</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/public/projects/detail/project-detail.component.html</context>
           <context context-type="linenumber">5</context>
@@ -90,7 +74,7 @@
       </trans-unit>
       <trans-unit id="CreatedAt|Label used for displaying project's creation date" datatype="html">
         <source>Created on:</source>
-        <target>Created on:</target>
+        <target>Creado el:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/public/projects/detail/project-detail.component.html</context>
           <context context-type="linenumber">26</context>
@@ -98,7 +82,7 @@
       </trans-unit>
       <trans-unit id="MoreInformation|Label used for displaying project's link to get more information" datatype="html">
         <source> More information</source>
-        <target> More information</target>
+        <target> Más información</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/public/projects/detail/project-detail.component.html</context>
           <context context-type="linenumber">34</context>

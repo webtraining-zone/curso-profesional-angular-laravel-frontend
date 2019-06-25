@@ -1,5 +1,15 @@
 @import "../../../styles-variables";
 
+.b-header-top {
+  background: $color-top-header;
+  color: white;
+  min-height: 30px;
+
+  a {
+    color: white;
+  }
+}
+
 .b-header {
   background-color: white;
   border-bottom: 2px solid darken($color-primary, 15%);
@@ -10,4 +20,19 @@
   text-transform: uppercase;
   margin-left: 5px;
   color: black;
+}
+
+.b-languages {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  right: 1rem;
+  width: 100%;
+  padding: 5px;
+  font-size: 13px;
+}
+
+.b-language {
+  margin-left: 1em;
 }

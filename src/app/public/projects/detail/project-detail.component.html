@@ -1,6 +1,6 @@
 <div class="container">
   <div class="b-component margin-top-sm">
-    <button (click)="goBack()" class="button is-success is-outlined">
+    <button (click)="goBack()" class="button is-outlined">
       <i class="fas fa-arrow-left"></i>
       <span i18n="@@GoBackButton|Label used for displaying a go back button">&nbsp;Go back</span>
     </button>
@@ -14,17 +14,22 @@
         <div class="column is-one-third">
           <figure class="b-project__image-container">
             <img src="{{project.image | generateImageUrl}}"
-                 alt="{{ project.title }}" class="b-project__image">
+                 alt="{{ project | getFieldByLocale:'title' }}" class="b-project__image">
           </figure>
 
         </div>
         <div class="column">
           <div class="content b-project">
-            <h1 class="b-project__title">{{ project.title }}</h1>
-            <div class="b-project__year">
+            <h1 class="b-project__title">{{ project | getFieldByLocale:'title' }}</h1>
+            <div class="b-project__created-at">
               <p>
-                <strong i18n="@@CreatedAt|Label used for displaying project's creation date">Created on:</strong> {{ project.created_at }}
+                <strong i18n="@@CreatedAt|Label used for displaying project's creation date">Created
+                  on:</strong> {{ project.created_at }}
               </p>
+            </div>
+
+            <div class="b-project__description">
+              {{ project | getFieldByLocale:"description"}}
             </div>
 
             <div class="b-project__more-link">

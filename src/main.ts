@@ -12,12 +12,12 @@ if (environment.production) {
 declare const require;
 
 // we use the webpack raw-loader to return the content as a string
-const translations = require(`raw-loader!./locale/messages.es.xlf`);
+// const translations = require(`raw-loader!./locale/messages.es.xlf`);
 
 platformBrowserDynamic().bootstrapModule(AppModule, {
   providers: [
-    {provide: TRANSLATIONS, useValue: translations},
-    {provide: TRANSLATIONS_FORMAT, useValue: 'xlf'}
+    // {provide: TRANSLATIONS, useValue: translations},
+    // {provide: TRANSLATIONS_FORMAT, useValue: 'xlf'}
   ]
 })
   .catch(err => console.error(err));

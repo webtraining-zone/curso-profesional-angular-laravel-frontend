@@ -43,7 +43,9 @@ import { FilterByPipe } from './common/pipes/filter-by.pipe';
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
   ],
-  providers: [httpInterceptorProviders, { provide: LOCALE_ID, useValue: 'fr' }],
+  providers: [httpInterceptorProviders,
+    // { provide: LOCALE_ID, useValue: 'fr' }
+    ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

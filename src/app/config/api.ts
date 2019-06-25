@@ -1,5 +1,7 @@
+import {environment} from '../../environments/environment';
+
 export const API = {
-  AUTH_SERVICES_BASE_URL: 'http://127.0.0.1:8000/api/v1',
-  DATA_SERVICES_BASE_URL: 'http://127.0.0.1:8000/api/v1',
-  IMAGES_BASE_URL: 'http://127.0.0.1:8000/img',
+  AUTH_SERVICES_BASE_URL: environment.AUTH_SERVICES_BASE_URL,
+  DATA_SERVICES_BASE_URL: environment.DATA_SERVICES_BASE_URL,
+  IMAGES_BASE_URL: environment.IMAGES_BASE_URL,
 };

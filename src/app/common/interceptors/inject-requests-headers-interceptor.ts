@@ -32,6 +32,7 @@ export class InjectRequestsHeadersInterceptor implements HttpInterceptor {
 
     const headers = {
       'Content-Type': 'application/json',
+      // 'x-api-locale': 'es',
     };
 
     const token = this.getToken();

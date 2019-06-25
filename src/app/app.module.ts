@@ -19,6 +19,7 @@ import { ProjectDetailComponent } from './public/projects/detail/project-detail.
 import { GenerateImageUrlPipe } from './common/pipes/generate-image-url.pipe';
 import { GetFirstCharPipe } from './common/pipes/get-first-char.pipe';
 import { FilterByPipe } from './common/pipes/filter-by.pipe';
+import { GetFieldByLocalePipe } from './common/pipes/get-field-by-locale.pipe';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FilterByPipe } from './common/pipes/filter-by.pipe';
     GenerateImageUrlPipe,
     GetFirstCharPipe,
     FilterByPipe,
+    GetFieldByLocalePipe,
   ],
   imports: [
     BrowserModule,

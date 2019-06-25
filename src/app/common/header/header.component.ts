@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   isModalActive;
 
   languages = [
-    { code: 'en-US', label: 'English'},
+    { code: 'en', label: 'English'},
     { code: 'es', label: 'Español'},
   ];
 

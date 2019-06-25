@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, LOCALE_ID, OnInit} from '@angular/core';
 import {AfterLoginActionsService} from '../services/after-login-actions.service';
 import {AuthenticationService} from '../services/authentication.service';
 import {Router} from '@angular/router';
@@ -12,11 +12,18 @@ import {ToggleModalService} from '../services/toggle-modal.service';
 export class HeaderComponent implements OnInit {
   isModalActive;
 
+  languages = [
+    { code: 'en-US', label: 'English'},
+    { code: 'es', label: 'Español'},
+  ];
+
   constructor(
     public afterLoginActionsService: AfterLoginActionsService,
     public toggleModalService: ToggleModalService,
     public authService: AuthenticationService,
-    public router: Router) {
+    public router: Router,
+    @Inject(LOCALE_ID) protected localeId: string) {
+    console.log('Current locale:', localeId);
   }
 
   ngOnInit() {

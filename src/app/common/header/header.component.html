@@ -1,3 +1,16 @@
+<div class="b-header-top">
+  <div class="container">
+    <div class="b-languages">
+      <ng-template ngFor let-lang [ngForOf]="languages">
+          <span class="b-language" *ngIf="lang.code !== localeId">
+            <a href="/{{lang.code}}/">{{lang.label}}</a>
+          </span>
+        <span class="b-language" *ngIf="lang.code === localeId">{{lang.label}}</span>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
 <header class="b-header">
   <div class="container">
     <nav class="navbar is-transparent is-spaced">
@@ -13,18 +26,18 @@
         </div>
       </div>
 
-      <div id="navbarAwesomeCartRental" class="navbar-menu">
+      <div class="navbar-menu">
         <div class="navbar-start">
 
         </div>
-
         <div class="navbar-end">
+
           <a class="navbar-item" (click)="toggleModal()" *ngIf="!authService.isLoggedIn()">
-            <span i18n="Login">Login</span>
+            <span i18n="@@Login">Login</span>
           </a>
 
           <a class="navbar-item" (click)="logout()" *ngIf="authService.isLoggedIn()">
-            <span i18n="Logout">Logout</span>
+            <span i18n="@@Logout">Logout</span>
           </a>
 
         </div>

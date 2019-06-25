@@ -11,17 +11,19 @@
     <div class="card-content">
       <div class="media">
         <div class="media-left">
-          <a href="#" routerLink="/projects/{{project.slug}}" class="b-project__manufacturer-char">
+          <a href="#" routerLink="/projects/{{project.slug}}" class="b-project__project-char">
             A
           </a>
         </div>
         <div class="media-content">
           <p class="b-project__title title is-4">
             <a class="b-project__title-link" routerLink="/projects/{{project.slug}}">
-              {{project.title}}
+              {{project | getFieldByLocale:'title'}}
             </a>
           </p>
-          <p class="b-project__subtitle subtitle is-6">NAME</p>
+          <p class="b-project__description subtitle is-6">
+            {{ project | getFieldByLocale:'description'}}
+          </p>
         </div>
       </div>
 

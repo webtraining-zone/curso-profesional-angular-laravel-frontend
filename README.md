@@ -1,4 +1,39 @@
-# CursoProfesionalAngularLaravelFrontend
+# Curso Profesional Angular + Laravel para aplicaciones multi-idioma
+
+## Ejecución de servidor de pruebas
+
+Iniciar la aplicación en modo desarrollo con `locale` por defecto a `English` (idioma pre-determinado).
+```
+npm run start
+
+// O con Yarn
+yarn start
+```
+Iniciar la aplicación en modo desarrollo con `locale` = `Español`.
+```
+npm run start:es
+
+// O con Yarn
+yarn start:es
+```
+
+## 
+Hacer build con idioma por defecto `English`
+```
+npm run build
+
+// O con Yarn
+yarn build
+```
+
+Hacer build con idioma `Español`
+```
+npm run build:es
+
+// O con Yarn
+yarn build:es
+```
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 

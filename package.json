@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "yarn carbon-init && ng serve ",
     "start:es": "ng serve --configuration=es",
     "build:default": "ng build",
     "build": "npm run build:en && npm run build:es",
@@ -12,7 +12,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "i18n:extract": "ng xi18n --outputPath src/locale && xliffmerge --profile xliffmerge.json en es",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "carbon-init": "node ./init.carbon.documents.js"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +25,7 @@
     "@angular/platform-browser": "~8.0.1",
     "@angular/platform-browser-dynamic": "~8.0.1",
     "@angular/router": "~8.0.1",
+    "carbonldp": "^5.2.0",
     "ng2-ckeditor": "^1.2.3",
     "ngx-webstorage": "^4.0.1",
     "rxjs": "~6.4.0",

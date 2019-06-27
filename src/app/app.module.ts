@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {LOCALE_ID, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -14,12 +14,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {NgxWebstorageModule} from 'ngx-webstorage';
 import {httpInterceptorProviders} from './common/interceptors';
 import {FormsModule} from '@angular/forms';
-import { AuthHomeComponent } from './auth/home/auth-home/auth-home.component';
-import { ProjectDetailComponent } from './public/projects/detail/project-detail.component';
-import { GenerateImageUrlPipe } from './common/pipes/generate-image-url.pipe';
-import { GetFirstCharPipe } from './common/pipes/get-first-char.pipe';
-import { FilterByPipe } from './common/pipes/filter-by.pipe';
-import { GetFieldByLocalePipe } from './common/pipes/get-field-by-locale.pipe';
+import {AuthHomeComponent} from './auth/home/auth-home/auth-home.component';
+import {ProjectDetailComponent} from './public/projects/detail/project-detail.component';
+import {GenerateImageUrlPipe} from './common/pipes/generate-image-url.pipe';
+import {GetFirstCharPipe} from './common/pipes/get-first-char.pipe';
+import {FilterByPipe} from './common/pipes/filter-by.pipe';
+import {GetFieldByLocalePipe} from './common/pipes/get-field-by-locale.pipe';
+import {CommentsComponent} from './common/comments/comments.component';
+import {CKEditorModule} from 'ng2-ckeditor';
 
 @NgModule({
   declarations: [
@@ -37,17 +39,20 @@ import { GetFieldByLocalePipe } from './common/pipes/get-field-by-locale.pipe';
     GetFirstCharPipe,
     FilterByPipe,
     GetFieldByLocalePipe,
+    CommentsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    CKEditorModule,
     NgxWebstorageModule.forRoot(),
   ],
   providers: [httpInterceptorProviders,
     // { provide: LOCALE_ID, useValue: 'fr' }
-    ],
+  ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}

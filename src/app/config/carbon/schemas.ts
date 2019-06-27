@@ -1,17 +1,25 @@
 export const PROJECT_SCHEMA = {
   id: {
     '@type': 'string'
+  },
+  comments: {
+    '@container': '@set',
+    '@type': '@id'
   }
 };
 
 export const USER_SCHEMA = {
   email: {
     '@type': 'string'
+  },
+  comments: {
+    '@container': '@set',
+    '@type': '@id'
   }
 };
 
 export const COMMENTS_SCHEMA = {
-  user: {
+  author: {
     '@type': '@id'
   },
   project: {

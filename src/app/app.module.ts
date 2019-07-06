@@ -22,7 +22,7 @@ import {FilterByPipe} from './common/pipes/filter-by.pipe';
 import {GetFieldByLocalePipe} from './common/pipes/get-field-by-locale.pipe';
 import {CommentsComponent} from './common/comments/comments.component';
 import {CKEditorModule} from 'ng2-ckeditor';
-import carbon from './config/carbon/carbon-init';
+import carbon from './config/carbonLDP/carbon-init';
 import {CarbonLDP} from 'carbonldp';
 
 @NgModule({

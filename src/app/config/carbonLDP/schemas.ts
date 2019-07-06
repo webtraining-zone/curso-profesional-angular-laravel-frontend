@@ -29,3 +29,6 @@ export const COMMENTS_SCHEMA = {
     '@type': 'string'
   }
 };
+
+
+export const COMMENTS_CONTAINER = 'Comments/';

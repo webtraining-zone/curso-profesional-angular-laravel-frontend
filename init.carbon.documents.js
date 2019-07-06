@@ -21,6 +21,20 @@ carbon.documents.$exists('es/').then((exist) => {
   }
 }).catch(e => console.log(e));
 
+
+carbon.documents.$exists('en/comments/').then((exist) => {
+  if (!exist) {
+    carbon.documents.$create('en/', {}, 'comments');
+  }
+}).catch(e => console.log(e));
+
+carbon.documents.$exists('es/comments/').then((exist) => {
+  if (!exist) {
+    carbon.documents.$create('es/', {}, 'comments');
+  }
+}).catch(e => console.log(e));
+
+
 carbon.documents.$exists('users/').then((exist) => {
   if (!exist) {
     carbon.documents.$create('/', {}, 'users');

@@ -48,7 +48,7 @@
 
     </div>
 
-    <app-comments></app-comments>
+    <app-comments *ngIf="project" [currentLanguage]="currentLanguage" [projectId]="project.slug"></app-comments>
   </div>
 </div>
 

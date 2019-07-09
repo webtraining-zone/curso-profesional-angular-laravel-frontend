@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, LOCALE_ID, OnInit} from '@angular/core';
 import {Project} from '../models/project.model';
 import {ActivatedRoute} from '@angular/router';
 import {ProjectsService} from '../services/projects.service';
@@ -11,11 +11,15 @@ import {Location} from '@angular/common';
 })
 export class ProjectDetailComponent implements OnInit {
   project: Project;
+  currentLanguage: string;
 
   constructor(
     private route: ActivatedRoute,
     private projectsService: ProjectsService,
-    private location: Location) {
+    private location: Location,
+    @Inject(LOCALE_ID) protected localeId: string) {
+    this.currentLanguage = localeId;
+    console.log('Current locale:', localeId);
   }
 
   ngOnInit() {
@@ -25,11 +29,10 @@ export class ProjectDetailComponent implements OnInit {
   getProject() {
     // Get the "id" from the route
     const slug = this.route.snapshot.paramMap.get('slug');
-    this.projectsService.getProject(slug).
-      subscribe(
-        project => this.project = project,
-        error => console.error(error),
-      );
+    this.projectsService.getProject(slug).subscribe(
+      project => this.project = project,
+      error => console.error(error),
+    );
     // this.vehicle = this._vehiclesService.getProject(id);
   }
 

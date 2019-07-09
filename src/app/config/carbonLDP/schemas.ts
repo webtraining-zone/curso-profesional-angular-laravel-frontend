@@ -1,3 +1,8 @@
+// Constants for CarbonLDP Schemas
+export const BASE_CARBON_LDP_SCHEMA: any = {
+  wt: 'http://www.webtraining.zone/ns#',
+};
+
 export const PROJECT_SCHEMA = {
   id: {
     '@type': 'string'
@@ -31,4 +36,4 @@ export const COMMENTS_SCHEMA = {
 };
 
 
-export const COMMENTS_CONTAINER = 'Comments/';
+export const COMMENTS_CONTAINER = 'comments/';

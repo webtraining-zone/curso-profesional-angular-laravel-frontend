@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {SessionStorageService} from 'ngx-webstorage';
 import {AuthenticationService} from '../../../common/services/authentication.service';
 import {AfterLoginActionsService} from '../../../common/services/after-login-actions.service';
+import {UsersService} from '../../../common/services/carbonLDP/users.service';
 
 @Component({
   selector: 'app-login-form',
@@ -19,6 +20,7 @@ export class LoginFormComponent implements OnInit {
     public authService: AuthenticationService,
     public sessionStorage: SessionStorageService,
     public afterLoginActionsService: AfterLoginActionsService,
+    public usersService: UsersService,
     public router: Router) {
   }
 
@@ -38,7 +40,9 @@ export class LoginFormComponent implements OnInit {
         // Close the modal
         this.afterLoginActionsService.onLoginCompleted.emit('Done');
 
-        this.router.navigate(['/auth-home']); // Navigate to "auth-home"
+        this.usersService.getCarbonUser(this.authService.user.user.id).then(() => {
+          this.router.navigate(['/auth-home']); // Navigate to "auth-home"
+        });
       },
       err => {
         console.error(err);

@@ -1,11 +1,17 @@
 <section class="b-comments">
-  <div class="container">
-
+  <div *ngFor="let comment of comments" class="b-comments__container">
+    <div class="b-comment">
+      <span class="b-comment__user">{{comment.author.name}} says:</span>
+      <div class="b-comment__content" [innerHTML]="comment.content">
+      </div>
+    </div>
   </div>
-  <div class="b-comment__form">
+  <div class="b-comments__form" *ngIf="user">
     <ckeditor
       [(ngModel)]="ckeditorContent"
       debounce="500">
     </ckeditor>
+
+    <button (click)="saveComment()">Save</button>
   </div>
 </section>

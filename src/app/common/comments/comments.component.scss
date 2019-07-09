@@ -1,0 +1,25 @@
+.b-comments {
+  margin: 20px;
+
+  &__container {
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    margin-top: 10px;
+  }
+
+  .b-comment {
+    padding-bottom: 20px;
+    border-bottom: #ff8e00 solid 1px;
+
+    &__user {
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    &__content {
+      padding-left: 40px;
+    }
+  }
+}

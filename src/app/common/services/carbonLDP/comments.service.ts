@@ -24,26 +24,35 @@ export class CommentsService {
     return this.carbonLDP.documents.$getMembers(this.currentLanguage + COMMENTS_CONTAINER, _ => _
       .withType('wt:Comment')
       .properties(_.all)
-      .filter(`${_.property('projectId')} = ${_.value(Id)}`)
+      .filter(`${_.property('project')} = ${_.object(Id)}`)
+      .properties({
+        author: {
+          query: _ => _
+            .properties(_.all)
+        }
+      })
     ).then((comments: Array<Document & Comment>) => {
       return comments;
     });
 
   }
 
-  public createComment(projectId, content, userId): Promise<Comment> {
-    const comment = {projectId, content, userId, types: ['wt:Comment']};
+
+  public createComment(project, content, user): Promise<Comment> {
+    const comment = {project, content, author: user, types: ['wt:Comment']};
     return this.carbonLDP.documents
       .$createAndRetrieve(this.currentLanguage + COMMENTS_CONTAINER, comment)
       .then((commentDocument: Comment) => {
-        return commentDocument;
+        return this.carbonLDP.documents.$get(comment.author.$id).then(() => {
+          return commentDocument;
+        });
       });
   }
 }
 
 
 export class Comment {
-  userId: string;
-  projectId: string;
+  author: any;
+  project: any;
   content: string;
 }

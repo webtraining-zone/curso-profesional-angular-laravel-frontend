@@ -24,6 +24,16 @@ export class AuthenticationService {
     return this.hasSession;
   }
 
+  public getAuthenticatedUser() {
+    const userData = this.sessionStorage.retrieve('user');
+    if (!!userData) {
+      console.log(userData.user);
+      return userData.user;
+    }
+
+    return false;
+  }
+
   public login(email: string, password: string) {
     const url = `${API.AUTH_SERVICES_BASE_URL}/auth/login`;
 

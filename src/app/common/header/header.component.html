@@ -36,6 +36,11 @@
             <span i18n="@@Login">Login</span>
           </a>
 
+          <span class="navbar-item" *ngIf="authService.isLoggedIn() && userInHeader">
+            <!-- @TODO: Mahe "Hi" multi-lingual -->
+            Hi, {{userInHeader.name}}
+          </span>
+
           <a class="navbar-item" (click)="logout()" *ngIf="authService.isLoggedIn()">
             <span i18n="@@Logout">Logout</span>
           </a>

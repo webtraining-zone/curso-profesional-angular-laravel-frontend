@@ -35,7 +35,8 @@ export class LoginFormComponent implements OnInit {
         this.authService.hasSession = true;
         this.sessionStorage.store('user', data);
 
-        // Close the modal
+        // This "after login service" is used in the "Header" component
+        // to close the modal and create the "userInHeader" object to render the "user.name"
         this.afterLoginActionsService.onLoginCompleted.emit('Done');
 
         this.router.navigate(['/auth-home']); // Navigate to "auth-home"

@@ -17,6 +17,8 @@ export class HeaderComponent implements OnInit {
     { code: 'es', label: 'Español'},
   ];
 
+  userInHeader: object = null;
+
   constructor(
     public afterLoginActionsService: AfterLoginActionsService,
     public toggleModalService: ToggleModalService,
@@ -24,12 +26,21 @@ export class HeaderComponent implements OnInit {
     public router: Router,
     @Inject(LOCALE_ID) protected localeId: string) {
     console.log('Current locale:', localeId);
+
+    // Try to get the user if doesn't exist
+    // This is useful when the page loads and the user has a valid token
+    if (!this.userInHeader) {
+      this.userInHeader = this.authService.getAuthenticatedUser();
+    }
   }
 
   ngOnInit() {
     this.afterLoginActionsService.onLoginCompleted.subscribe(
       (message: string) => {
         this.toggleModal();
+
+        // After login assign the user
+        this.prepareUser();
       });
 
     this.toggleModalService.onToggle.subscribe(
@@ -40,6 +51,10 @@ export class HeaderComponent implements OnInit {
 
   toggleModal() {
     this.isModalActive = !this.isModalActive;
+  }
+
+  prepareUser() {
+    this.userInHeader = this.authService.getAuthenticatedUser();
   }
 
   logout() {
